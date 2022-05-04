@@ -19,32 +19,32 @@
         "name":"Intel 8051",
         "img":"https://upload.wikimedia.org/wikipedia/commons/f/f0/KL_Intel_P8051.jpg",
         "description": "The Intel MCS-51 is a single chip microcontroller series developed by Intel in 1980 for use in embedded systems. The architect of the Intel MCS-51 instruction set was John H. Wharton.",
-        "price": "",
-        "quantity": "",
-        "supplierName": ""
+        "price": "2000 BDT",
+        "quantity": "50",
+        "supplierName": "Intel"
     },
     {
-        "name":"Arduino Uno",
-        "img":"",
-        "description": "",
-        "price": "",
-        "quantity": "",
-        "supplierName": ""
+        "name":"ESP32 ESP-32S 30P NodeMCU Development Board",
+        "img":"https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/87/527239/1.jpg?5223",
+        "description": "general-purpose  Wi-Fi+BT+BLE MCU module.ESP-WROOM-32s The module integrates traditional Bluetooth, Bluetooth low energy and Wi-Fi. Wide range of uses: Wi-Fi supports a wide range of communication connections, as well as a direct connection to the Internet via a router. The module supports data rates up to 150 Mbps and antenna output power of 20dBm for maximum wireless communication.",
+        "price": "820 BDT",
+        "quantity": "12",
+        "supplierName": "LuaNode"
     },
     {
-        "name":"Arduino Uno",
-        "img":"",
-        "description": "",
-        "price": "",
-        "quantity": "",
-        "supplierName": ""
+        "name":"Servo Motor",
+        "img":"https://www.linquip.com/blog/wp-content/uploads/2021/06/ac-servo-motor-200w-ecma-c20602r1-shaft-11mm-149709-en-G.jpg",
+        "description": "A servomotor (or servo motor) is a rotary actuator or linear actuator that allows for precise control of angular or linear position, velocity and acceleration. It consists of a suitable motor coupled to a sensor for position feedback.",
+        "price": "3000 BDT",
+        "quantity": "17",
+        "supplierName": "Arana Corp"
     },
     {
-        "name":"Arduino Uno",
-        "img":"",
-        "description": "",
-        "price": "",
-        "quantity": "",
-        "supplierName": ""
+        "name":"XR-2206",
+        "img":"https://i.ytimg.com/vi/5p5ZMXkaPW0/hqdefault.jpg",
+        "description": "The XR-2206 is a monolithic function generator integrated circuit capable of producing high quality sine, square, triangle, ramp, and pulse waveforms ",
+        "price": "75 BDT",
+        "quantity": "80",
+        "supplierName": "Exar Corporation"
     }
 ]
