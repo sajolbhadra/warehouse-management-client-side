@@ -1,0 +1,50 @@
+[
+    {
+        "name":"Arduino Uno",
+        "img":"https://www.arduino.cc/en/uploads/Main/A000066_iso_both.jpg",
+        "description": "The Arduino Uno is an open-source microcontroller board based on the Microchip ATmega328P microcontroller and developed by Arduino.cc. The board is equipped with sets of digital and analog input/output pins that may be interfaced to various expansion boards and other circuits",
+        "price": "750 BDT",
+        "quantity": "5",
+        "supplierName": "Smart Projects"
+    },
+    {
+        "name":"Rasberry Pi 4",
+        "img":"https://m.media-amazon.com/images/I/51q83dEsrJS._AC_SX425_.jpg",
+        "description": "The Raspberry Pi 4 Model B is the first of the fourth generation of Raspberry Pi computers. The latest model brings with it a more powerful Broadcom BCM2711B0 quad-core ARM processor and the 4K-capable Broadcom VideoCore VI video processor",
+        "price": "4500 BDT",
+        "quantity": "3",
+        "supplierName": "Arrow.com"
+    },
+    {
+        "name":"Intel 8051",
+        "img":"https://upload.wikimedia.org/wikipedia/commons/f/f0/KL_Intel_P8051.jpg",
+        "description": "The Intel MCS-51 is a single chip microcontroller series developed by Intel in 1980 for use in embedded systems. The architect of the Intel MCS-51 instruction set was John H. Wharton.",
+        "price": "",
+        "quantity": "",
+        "supplierName": ""
+    },
+    {
+        "name":"Arduino Uno",
+        "img":"",
+        "description": "",
+        "price": "",
+        "quantity": "",
+        "supplierName": ""
+    },
+    {
+        "name":"Arduino Uno",
+        "img":"",
+        "description": "",
+        "price": "",
+        "quantity": "",
+        "supplierName": ""
+    },
+    {
+        "name":"Arduino Uno",
+        "img":"",
+        "description": "",
+        "price": "",
+        "quantity": "",
+        "supplierName": ""
+    }
+]
