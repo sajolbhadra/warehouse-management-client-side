@@ -7,6 +7,7 @@ import ManageInventory from './pages/ManageInventory/ManageInventory';
 import AddInventory from './pages/AddInventory/AddInventory';
 import Navigation from './pages/Shared/Navigation/Navigation';
 import Footer from './pages/Shared/Footer/Footer';
+import Blog from './pages/Blog/Blog';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/add-inventory" element={<AddInventory></AddInventory>}></Route>
         <Route path="/manage-inventory" element={<ManageInventory></ManageInventory>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
-        <Route path="/blog" element={<Home></Home>}></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

@@ -8,11 +8,25 @@ const Footer = () => {
                <div className="container">
                    <div className="row">
                         <div className="footer-col">
-                            <h4>About Solo Traveler</h4>
+                            <h4>About</h4>
                             <ul>
                                 <li><a href="https://www.google.com">About Us</a> </li>
                                 <li><a href="https://www.google.com">Our Story</a> </li>
                                 <li><a href="https://www.google.com">Our Services</a> </li>
+                            </ul>
+                        </div>
+                        <div className="footer-col">
+                            <h4>Contact</h4>
+                            <ul>
+                                <li><a href="https://www.google.com">Advertise with Us</a> </li>
+                                <li><a href="https://www.google.com">Affiliate Program</a> </li>
+                            </ul>
+                        </div>
+                        <div className="footer-col">
+                            <h4>Terms of Use</h4>
+                            <ul>
+                                <li><a href="https://www.google.com">Privacy Policy</a> </li>
+                                <li><a href="https://www.google.com">Term & Condition</a> </li>
                             </ul>
                         </div>
 
