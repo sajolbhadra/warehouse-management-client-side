@@ -18,6 +18,7 @@ function App() {
         <Route path="/add-inventory" element={<AddInventory></AddInventory>}></Route>
         <Route path="/manage-inventory" element={<ManageInventory></ManageInventory>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/blog" element={<Home></Home>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

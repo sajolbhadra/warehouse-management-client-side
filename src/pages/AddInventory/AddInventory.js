@@ -8,9 +8,24 @@ const AddInventory = () => {
         const description = event.target.description.value;
         const price = event.target.price.value;
         const quantity = event.target.quantity.value;
-        const supplierName = event.target.supplier-name.value;
+        const supplierName = event.target.supplierName.value;
 
         const item = {name, img, description, price, quantity, supplierName}
+
+        //send data to server
+        fetch('http://localhost:5000/item', {
+            method:'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(item)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log('success', data)
+            alert('Items Added Successfuly');
+            event.target.reset()
+        })
     }
     return (
         <div>
@@ -22,7 +37,8 @@ const AddInventory = () => {
                 <input type="text" className='w-50 my-1 px-3 py-1 border rounded-pill text-primary' name="description" placeholder='description' required /> <br />
                 <input type="text" className='w-50 my-1 px-3 py-1 border rounded-pill text-primary' name="price" placeholder='price' required /> <br />
                 <input type="text" className='w-50 my-1 px-3 py-1 border rounded-pill text-primary' name="quantity" placeholder='quantity' required /> <br />
-                <input type="text" className='w-50 my-1 px-3 py-1 border rounded-pill text-primary' name="supplier-name" placeholder='supplier Name' required /> <br />
+                <input type="text" className='w-50 my-1 px-3 py-1 border rounded-pill text-primary' name="supplierName" placeholder='supplier Name' required /> <br />
+                <input type="submit" value="Submit" />
             </form>
         </div>
     );
