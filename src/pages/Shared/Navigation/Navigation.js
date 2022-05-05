@@ -12,6 +12,8 @@ const Navigation = () => {
     <Nav className="me-auto">
       <Link className='text-decoration-none text-light mx-2' to="/add-inventory">Add Inventory</Link>
       <Link className='text-decoration-none text-light mx-2' to="/manage-inventory">Manage Invenotory</Link>
+      <Link className='text-decoration-none text-light mx-2' to="/my-inventory">My Inventory</Link>
+      <Link className='text-decoration-none text-light mx-2' to="/blog">Blog</Link>
       {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

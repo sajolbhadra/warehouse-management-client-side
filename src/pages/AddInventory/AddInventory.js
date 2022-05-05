@@ -29,6 +29,7 @@ const AddInventory = () => {
     }
     return (
         <div>
+            <h1  className='text-center bg-primary text-light py-2 '>Add to Inventory</h1>
             <h1 className='text-center my-5'>Add Item</h1>
             <form onSubmit={handleAddItem} className="text-center my-5">
 
