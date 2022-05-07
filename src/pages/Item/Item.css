@@ -1,0 +1,19 @@
+.card-row{
+    background-color: goldenrod;
+
+}
+.card-container{
+    background-color: brown;
+    
+}
+.card-column{
+    background-color: blanchedalmond;
+    max-width: 30vw;  
+
+}
+.card-image{
+    height: 40vh;
+    width: 50vh;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
