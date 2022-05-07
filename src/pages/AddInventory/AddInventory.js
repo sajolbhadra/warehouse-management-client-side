@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AddInventory = () => {
     const handleAddItem = (event) => {
@@ -30,7 +31,7 @@ const AddInventory = () => {
     return (
         <div>
             <h1  className='text-center bg-primary text-light py-2 '>Add to Inventory</h1>
-            <h1 className='text-center my-5'>Add Item</h1>
+            <h1 className='text-center my-5'>Fill Data</h1>
             <form onSubmit={handleAddItem} className="text-center my-5">
 
                 <input type="text" className='w-50 my-1 px-3 py-1 border rounded-pill text-primary' name="name" placeholder='name' required /> <br />
@@ -39,8 +40,12 @@ const AddInventory = () => {
                 <input type="text" className='w-50 my-1 px-3 py-1 border rounded-pill text-primary' name="price" placeholder='price' required /> <br />
                 <input type="text" className='w-50 my-1 px-3 py-1 border rounded-pill text-primary' name="quantity" placeholder='quantity' required /> <br />
                 <input type="text" className='w-50 my-1 px-3 py-1 border rounded-pill text-primary' name="supplierName" placeholder='supplier Name' required /> <br />
-                <input type="submit" value="Submit" />
+                <input type="submit" className='my-2' value="Submit" />
             </form>
+
+            <div className='text-center my-5 ' >
+                <Link to='/manage-inventory' className='btn btn-primary' >Manage Inventory</Link>
+            </div>
         </div>
     );
 };
