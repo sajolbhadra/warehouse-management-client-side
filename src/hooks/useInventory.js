@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useInventory = () => {
-    const [inventory, setInventory] = useState();
+    const [inventory, setInventory] = useState([]);
     useEffect( () => {
         fetch('http://localhost:5000/item')
         .then(res => res.json())

@@ -8,15 +8,12 @@ const UpdateInventory = () => {
     const [updateItem, setUpdateItem] = useUpdateInventory({});
     const {_id, name, img, description, price, quantity, supplierName } = updateItem;
 
-    localStorage.setItem(`${_id}`, `${quantity}`);
+    // localStorage.setItem(`${_id}`, `${quantity}`);
 
     const handleUpdateItem = (event) => {
         event.preventDefault();
         const quantity = event.target.updateQuantity.value;
-        let storage = parseInt(localStorage.getItem(`${_id}`));
-        console.log(storage)
-        const add = quantity + storage;
-        console.log(add)
+        // let storage = parseInt(localStorage.getItem(`${_id}`));
         const item = {quantity}
         //send data to server
         const url =`http://localhost:5000/item/${id}`;
