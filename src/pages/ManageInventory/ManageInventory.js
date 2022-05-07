@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useInventory from '../../hooks/useInventory';
 import ManageInventoryItem from '../ManageInventoryItem/ManageInventoryItem';
 
@@ -7,10 +8,19 @@ const ManageInventory = () => {
     const [inventory, setInventory] = useInventory([]);
     console.log(inventory)
 
-    const handleDeleteInventory = (_id) => {
+    const handleDeleteInventory = (id) => {
         const action = window.confirm('Want to Delete This Inventory? Ok To proceed');
         if(action){
-            // const url
+            const url = `http://localhost:5000/item/${id}`;
+            fetch(url , {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                const remaining = inventory.filter(item => item._id !==id)
+                setInventory(remaining)
+            })
 
         }
     }
@@ -26,6 +36,10 @@ const ManageInventory = () => {
                 ></ManageInventoryItem>)
             }
 
+
+            <div className='text-center my-5 ' >
+                <Link to='/add-inventory' className='btn btn-primary' >Add New Inventory</Link>
+            </div>
         </div>
     );
 };
