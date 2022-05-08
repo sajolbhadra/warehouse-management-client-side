@@ -10,6 +10,8 @@ import Footer from './pages/Shared/Footer/Footer';
 import Blog from './pages/Blog/Blog';
 import MyInventory from './pages/MyInventory/MyInventory';
 import UpdateInventory from './pages/UpdateInventory/UpdateInventory';
+import SignIn from './pages/SignIn/SignIn';
+import SignUp from './pages/SignUp/SignUp';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/my-inventory" element={<MyInventory></MyInventory>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/sign-in" element={<SignIn></SignIn>}></Route>
+        <Route path="/sign-up" element={<SignUp></SignUp>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
