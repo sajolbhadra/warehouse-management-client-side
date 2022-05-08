@@ -9,14 +9,14 @@ const ManageInventoryItem = (props) => {
     const { handleDeleteInventory } = props;
     return (
 
-        
-        <Container className='my-5'>
-            <Row className='my-3 border'>
-                <Col className='text-center d-flex align-items-center'><img src={img} className="img-class" alt="" /></Col>
-                <Col className='text-center d-flex align-items-center'>{name}</Col>
-                <Col className='text-center d-flex align-items-center'>{price}</Col>
-                <Col className='text-center d-flex align-items-center'>{supplierName}</Col>
-                <Col className='text-center d-flex align-items-center'>
+
+        <Container className='my-3'>
+            <Row className='my-1 border py-2'>
+                <Col className='text-center d-flex align-items-center justify-content-center'><img src={img} className="img-class" alt="" /></Col>
+                <Col className='text-center d-flex align-items-center justify-content-center'>{name}</Col>
+                <Col className='text-center d-flex align-items-center justify-content-center'>{price}</Col>
+                <Col className='text-center d-flex align-items-center justify-content-center'>Supplier : {supplierName}</Col>
+                <Col className='text-center d-flex align-items-center  justify-content-center'>
                     <Button onClick={() => handleDeleteInventory(_id)}> Delete</Button>
                 </Col>
             </Row>

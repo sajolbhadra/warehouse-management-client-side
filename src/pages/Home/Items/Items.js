@@ -14,7 +14,7 @@ const Items = () => {
     }
     return (
         <div>
-            <h1>Items {inventory.length}</h1>
+            {/* <h1>Items {inventory.length}</h1> */}
             {
                 inventory.map(item => <Item
                     key={item._id}

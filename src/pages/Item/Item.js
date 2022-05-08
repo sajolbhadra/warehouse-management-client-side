@@ -1,19 +1,31 @@
-import { Button } from 'bootstrap';
-import React, { useEffect, useState } from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
+import { Card, CardGroup, Col, Container, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import './Item.css'
 
 const Item = (props) => {
     const { _id, name, img, description, price, quantity, supplierName } = props.item;
-    const {handleUpdate} = props;
-    const {id} = useParams();
-    
+    const { handleUpdate } = props;
+    const { id } = useParams();
+
     return (
         <div>
+            <Container className='my-5 border '>
+                <Row className='w-75 mx-auto' >
+                    <Col className=''>
+                        <h4>{name}</h4>
+                        <p>{description}</p>
+                        <p>Cost/Unit: {price}</p>
+                        <p>Available {quantity}</p>
+                        <p>Supplier : {supplierName}</p>
+                    </Col>
+                    <Col className='d-flex flex-column'>
+                        <img src={img} className='img-class w-75' alt="" />
+                        <Link to={`/item/${_id}`} className='btn btn-primary w-75 my-5' >Update</Link>
+                    </Col>
+                </Row>
+            </Container>
 
-            <CardGroup>
-                <Card>
+            {/* <Card>
                     <Card.Img className='card-image' variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
@@ -27,13 +39,12 @@ const Item = (props) => {
                            Supplier Name : {supplierName}
                         </Card.Text>
                         {/* <button onClick={handleUpdate}>Update</button> */}
-                        <Link to={`/item/${_id}`} >Update</Link>
+            {/* <Link to={`/item/${_id}`} >Update</Link>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted ">Available Quantity: {quantity}</small>
                     </Card.Footer>
-                </Card>
-            </CardGroup>
+                </Card> */}
 
 
             {/* <div className='card-row'>
