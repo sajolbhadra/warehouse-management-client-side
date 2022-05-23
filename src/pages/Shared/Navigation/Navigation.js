@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import auth from '../../../firebase.init';
+import useFirebase from '../../../hooks/useFirebase';
 
 
 const Navigation = () => {
   const [users, setUsers] = useState({});
+  console.log(users)
   const logout = () => {
     signOut(auth);
   };
+  const { user, logOut } = useFirebase();
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -29,14 +33,26 @@ const Navigation = () => {
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown> */}
           </Nav>
+          {
+                            user && <img src={user.photoURL} alt="user" className='rounded-circle ' ></img>
+
+                        }
           <Nav>
 
             {
-              users ?
-                <button onClick={logout} className='btn btn-primary rounded-pill'>logout</button> :
-                <Link className='text-decoration-none text-light mx-2' to="/sign-in">Sign In</Link>
+              user?.uid
+              ?
+              <Button onClick={logOut}>Sign out</Button>
+              :
+              <Nav.Link as={Link} to="/sign-in">Sign In</Nav.Link>
+
+              // users?.uid 
+              // ?
+              //   <button onClick={logout} className='btn btn-primary rounded-pill'>logout</button>
+              //   :
+              //   <Link className='text-decoration-none text-light mx-2 btn btn-primary rounded-pill' to="/sign-in">Sign In</Link>
             }
-            <Link className='text-decoration-none text-light mx-2 btn btn-primary rounded-pill' to="/sign-in">Sign In</Link>
+            
 
           </Nav>
         </Navbar.Collapse>

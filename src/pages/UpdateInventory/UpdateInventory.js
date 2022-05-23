@@ -18,7 +18,7 @@ const UpdateInventory = () => {
         // let storage = parseInt(localStorage.getItem(`${_id}`));
         const item = { quantity }
         //send data to server
-        const url = `http://localhost:5000/item/${id}`;
+        const url = `https://thawing-escarpment-51010.herokuapp.com/item/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

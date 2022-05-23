@@ -3,10 +3,14 @@ import { Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { getAuth } from 'firebase/auth';
+import app from '../../firebase.init';
 
 
 
 const SignUp = () => {
+    const auth = getAuth(app)
+
     const navigate = useNavigate();
         const navigateLogin =() => {
             navigate('/home')
@@ -29,16 +33,16 @@ const SignUp = () => {
         console.log(loading)
         console.log(error)
         //to redirect after sign up
-        if(user){
-            navigate('/home');
-        }
+        // if(user){
+        //     navigate('/home');
+        // }
       }
 
 
     return (
         <div>
             <h1 className='text-center bg-primary text-light py-2 '>Sign Up</h1>
-
+            <h3>{user}</h3>
             <form onSubmit={handleSignUp} className="text-center mt-5 mb-3">
 
                 <input type="text" className='w-25 my-1 px-3 py-1 border rounded-pill text-primary' name="name" placeholder='Your Name' required /> <br />
@@ -50,7 +54,6 @@ const SignUp = () => {
             <h4 className='text-center mb-2'>Already Signed Up?</h4>
             <div className='text-center mt-3 mb-5 pb-5'>
                 <Link to='/sign-in' className=' btn btn-primary px-5 mx-3 rounded-pill'>Sign In With Email</Link>
-                <Button className='rounded-pill  px-5 mx-2 '> Google SIgn In </Button>
             </div>
         </div>
     );

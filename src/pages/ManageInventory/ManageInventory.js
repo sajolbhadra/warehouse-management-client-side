@@ -11,7 +11,7 @@ const ManageInventory = () => {
     const handleDeleteInventory = (id) => {
         const action = window.confirm('Want to Delete This Inventory? Ok To proceed');
         if(action){
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://thawing-escarpment-51010.herokuapp.com/item/${id}`;
             fetch(url , {
                 method: 'DELETE'
             })

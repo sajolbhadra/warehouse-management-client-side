@@ -7,7 +7,7 @@ const useUpdateInventory = () => {
     const [updateItem, setUpdateItem] = useState({});
 
     useEffect( () => {
-        const url =`http://localhost:5000/item/${id}`;
+        const url =`https://thawing-escarpment-51010.herokuapp.com/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setUpdateItem(data))

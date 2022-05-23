@@ -14,7 +14,7 @@ const AddInventory = () => {
         const item = {name, img, description, price, quantity, supplierName}
 
         //send data to server
-        fetch('http://localhost:5000/item', {
+        fetch('https://thawing-escarpment-51010.herokuapp.com/item', {
             method:'POST',
             headers: {
                 'content-type': 'application/json'
