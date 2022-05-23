@@ -9,6 +9,7 @@ const UpdateInventory = () => {
     const { id } = useParams();
     const [updateItem, setUpdateItem] = useUpdateInventory({});
     const { _id, name, img, description, price, quantity, supplierName } = updateItem;
+    console.log(name, img, description, price)
 
     // localStorage.setItem(`${_id}`, `${quantity}`);
 
