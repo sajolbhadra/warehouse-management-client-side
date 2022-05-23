@@ -12,7 +12,7 @@ const Header = () => {
                     
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
+                    <h3>Arduino UNO v2</h3>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </Carousel.Caption>
             </Carousel.Item>

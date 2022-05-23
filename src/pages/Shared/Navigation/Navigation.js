@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { signOut } from 'firebase/auth';
-import auth from '../../../firebase.init';
+import { getAuth, signOut } from 'firebase/auth';
 import useFirebase from '../../../hooks/useFirebase';
+import app from '../../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 const Navigation = () => {
   const [users, setUsers] = useState({});
   // console.log(users)
-  const logout = () => {
+  const auth = getAuth(app);
+  const logOut = () => {
     signOut(auth);
   };
-  const { user, logOut } = useFirebase();
+  const [user] = useAuthState(auth);
+  // const { user, logOut } = useFirebase();
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">

@@ -12,6 +12,7 @@ import MyInventory from './pages/MyInventory/MyInventory';
 import UpdateInventory from './pages/UpdateInventory/UpdateInventory';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
+import RequireAuth from './pages/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -20,10 +21,23 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
-        <Route path="/add-inventory" element={<AddInventory></AddInventory>}></Route>
+        <Route path="/add-inventory" element={
+          <RequireAuth>
+            <AddInventory></AddInventory>
+          </RequireAuth>
+        }></Route>
         <Route path="/item/:id" element={<UpdateInventory></UpdateInventory>}></Route>
-        <Route path="/manage-inventory" element={<ManageInventory></ManageInventory>}></Route>
-        <Route path="/my-inventory" element={<MyInventory></MyInventory>}></Route>
+        <Route path="/manage-inventory" element={
+          <RequireAuth>
+            <ManageInventory></ManageInventory>
+          </RequireAuth>
+        }></Route>
+
+        <Route path="/my-inventory" element={
+          <RequireAuth>
+            <MyInventory></MyInventory>
+          </RequireAuth>
+        }></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/sign-in" element={<SignIn></SignIn>}></Route>

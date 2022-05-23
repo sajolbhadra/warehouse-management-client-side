@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Button } from 'react-bootstrap';
 import app from '../../firebase.init';
 import { getAuth } from 'firebase/auth';
@@ -9,9 +9,10 @@ import useFirebase from '../../hooks/useFirebase';
 
 
 const SignIn = () => {
+    const auth = getAuth(app);
+    // const [user] = useAuthState(auth);
     // const emailRef = useRef('');
     // const passwordRef = useRef('');
-    const auth = getAuth(app)
     const [signInWithGoogle] = useSignInWithGoogle(auth)
     const navigate = useNavigate()
     const [
@@ -24,7 +25,9 @@ const SignIn = () => {
     if (user) {
         navigate('/home');
     }
-    const location = useLocation();
+    // if (user) {
+    //     navigate(from , {replace:true});
+    // }
     const handleGoogleSignIn = () => {
         signInWithGoogle()
             .then(() => {
@@ -38,9 +41,13 @@ const SignIn = () => {
         const password= event.target.password.value;
         // const email = emailRef.current.value;
         // const password = passwordRef.current.value;
-        // signInWithEmailAndPassword(email, password);
-        // console.log(user)
+        signInWithEmailAndPassword(email, password);
+        console.log(user, email, password)
+
+        
     }
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/';
     return (
         <div>
             <h1 className='text-center bg-primary text-light py-2 '>Sign In</h1>
