@@ -15,7 +15,6 @@ const useFirebase = () => {
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
                 const user = result.user;
-                console.log(user)
                 setUser(user);
             }).catch((error) => {
                 const errorCode = error.code;
@@ -38,7 +37,7 @@ const useFirebase = () => {
             if (user) {
                 const uid = user.uid;
                 setUser(user)
-                console.log(user)
+                // console.log(user)
             } else {
                 setUser({})
             }

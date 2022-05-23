@@ -9,8 +9,6 @@ const UpdateInventory = () => {
     const { id } = useParams();
     const [updateItem, setUpdateItem] = useUpdateInventory({});
     const { _id, name, img, description, price, quantity, supplierName } = updateItem;
-    console.log(name, img, description, price)
-
     // localStorage.setItem(`${_id}`, `${quantity}`);
 
     const handleUpdateItem = (event) => {
@@ -29,16 +27,39 @@ const UpdateInventory = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log('success', data)
+                // console.log('success', data)
                 alert('Inventory QUantity Updated Successfuly');
                 event.target.reset()
             })
         // console.log(item)
     };
+    const updateQuantity = (event) => {
+        event.preventDefault();
+        const currentQuantity = parseInt(quantity) - 1;
+        console.log(currentQuantity)
+        const newQuantity = currentQuantity;
+        
+        const item = { newQuantity }
+        //send data to server
+        // const url = `https://thawing-escarpment-51010.herokuapp.com/item/${id}`;
+        // fetch(url, {
+        //     method: 'PUT',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(item)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         // console.log('success', data)
+        //         alert('Inventory QUantity Updated Successfuly');
+        //     })
+
+    }
     return (
         <div>
             <h2 className='text-center bg-primary text-light py-2 '>Details of : {id}</h2>
-    
+
             <Container className='my-5'>
                 <Row className='my-3 border'>
                     <Col className='text-center d-flex align-items-center'><img src={img} className="img-class" alt="" /></Col>
@@ -47,8 +68,8 @@ const UpdateInventory = () => {
                     <Col className='text-center d-flex align-items-center'>Available: {quantity}</Col>
                     <Col className='text-center d-flex align-items-center'>Supplier: {supplierName}</Col>
                     <Col className='text-center d-flex align-items-center'>
-                    <Button > Delivered</Button>
-                </Col>
+                        <Button onClick={updateQuantity}> Delivered</Button>
+                    </Col>
                 </Row>
             </Container>
             <Container>

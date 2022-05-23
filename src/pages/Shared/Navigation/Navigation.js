@@ -8,7 +8,7 @@ import useFirebase from '../../../hooks/useFirebase';
 
 const Navigation = () => {
   const [users, setUsers] = useState({});
-  console.log(users)
+  // console.log(users)
   const logout = () => {
     signOut(auth);
   };

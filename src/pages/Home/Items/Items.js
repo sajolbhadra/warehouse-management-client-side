@@ -16,7 +16,7 @@ const Items = () => {
         <div>
             {/* <h1>Items {inventory.length}</h1> */}
             {
-                inventory.map(item => <Item
+                inventory.slice(0,6).map(item => <Item
                     key={item._id}
                     item={item}
                     handleUpdate={handleUpdate}
