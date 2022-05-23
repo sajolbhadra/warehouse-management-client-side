@@ -13,7 +13,7 @@ const Header = () => {
                 />
                 <Carousel.Caption>
                     <h3>Arduino UNO v2</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <p>Arduino Uno is a programmable opernsource microcontroller board</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -24,8 +24,8 @@ const Header = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Raspberry Pi 4</h3>
+                    <p>Worlds Most Smallest single board on chip Personal Computer</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -36,8 +36,8 @@ const Header = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h3>Oscilloscope</h3>
+                    <p> instrument that graphically displays varying electrical voltage</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
